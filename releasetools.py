@@ -18,10 +18,12 @@ import re
 
 def FullOTA_Assertions(info):
   input_zip = info.input_zip
+  AddBasebandAssertion(info, input_zip)
   return
 
 def IncrementalOTA_Assertions(info):
   input_zip = info.target_zip
+  AddBasebandAssertion(info, input_zip)
   return
 
 def FullOTA_InstallEnd(info):
@@ -34,14 +36,30 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info, input_zip)
   return
 
+def AddBasebandAssertion(info, input_zip):
+  android_info = input_zip.read("OTA/android-info.txt")
+  variants = []
+  for variant in ('in', 'cn', 'eea'):
+    result = re.search(r'require\s+version-{}\s*=\s*(\S+)'.format(variant), android_info)
+    if result is not None:
+      variants.append(result.group(1).split(','))
+  cmd = 'assert(getprop("ro.boot.hwc") == "{0}" && (xiaomi.verify_baseband("{2}", "{1}") == "1" || abort("ERROR: This package requires baseband from atleast {2}. Please upgrade firmware and retry!");) || true);'
+  for variant in variants:
+    info.script.AppendExtra(cmd.format(*variant))
+
 def AddImage(info, input_zip, basename, dest):
   name = basename
-  data = input_zip.read("IMAGES/" + basename)
+  path = "IMAGES/" + name
+  if path not in input_zip.namelist():
+    return
+
+  data = input_zip.read(path)
   common.ZipWriteStr(info.output_zip, name, data)
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def OTA_InstallEnd(info, input_zip):
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  AddImage(info, input_zip, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
   AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   return
