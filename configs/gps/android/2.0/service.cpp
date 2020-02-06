@@ -72,6 +72,13 @@ int main() {
     #else
         ALOGI("LOC_HIDL_VERSION not defined.");
     #endif
+        } else {
+            status = registerPassthroughServiceImplementation<IGnss>("gnss_vendor");
+            if (status != OK) {
+                ALOGE("Error while registering gnss_vendor service: %d", status);
+            }
+        }
+
         joinRpcThreadpool();
     } else {
         ALOGE("Error while registering IGnss 2.0 service: %d", status);
