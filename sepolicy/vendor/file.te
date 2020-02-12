@@ -24,3 +24,6 @@ type vibrator_dev, sysfs_type, fs_type;
 type bat_file, file_type;
 type demoapp_file, file_type;
 type log_file, file_type;
+
+# Data files
+type per_boot_file, file_type, data_file_type, core_data_file_type;
