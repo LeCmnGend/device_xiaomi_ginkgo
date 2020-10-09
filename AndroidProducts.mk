@@ -5,4 +5,11 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ginkgo.mk
+    $(LOCAL_DIR)/rr_ginkgo.mk
+
+COMMON_LUNCH_CHOICES := \
+    rr_ginkgo-user \
+    rr_ginkgo-userdebug \
+    rr_ginkgo-eng
+	
+NINJA_ARGS="-d explain"
