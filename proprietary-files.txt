@@ -59,7 +59,6 @@ vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libqcompostprocbundle.so
 vendor/lib/soundfx/libqcomvisualizer.so
@@ -145,6 +144,11 @@ vendor/lib64/libbt-hidlclient.so|b0f628ae43b2588266bc9ca51aa72544c1923372
 vendor/lib64/libbtnv.so|dd831c1c5734e0a59bdd1f80bcae3300c1f59be6
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|2816cf7ede31f13cc041ab54230ea3b5ca9cc3ef
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|6fe1aed00cd77677706cd6c62f08a2e591ab0608
+
+# Audio - Dirac - from Xiaomi
+vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
+vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
+vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 
 # Bluetooth - aptX - from redfin-user 11 RQ1A.210205.004 7038034 release-keys
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc

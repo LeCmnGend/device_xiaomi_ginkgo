@@ -138,7 +138,25 @@ persist.vendor.data.mode=concurrent
 ro.telephony.iwlan_operation_mode=legacy
 ro.vendor.use_data_netmgrd=true
 
-# Display
+# Dirac algo tsx 9/12
+persist.dirac.acs.controller=qem
+persist.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1
+
+# Dirac headset effect
+ro.audio.soundfx.dirac=true
+persist.audio.dirac.speaker=true
+
+# FM
+vendor.hw.fm.init=0
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Fwk detect
+ro.vendor.qti.va_aosp.support=1
+
+# Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
