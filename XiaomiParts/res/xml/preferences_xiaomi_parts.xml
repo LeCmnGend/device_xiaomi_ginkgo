@@ -61,8 +61,8 @@
             android:icon="@drawable/ic_doze">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"
-                android:targetPackage="org.lineageos.settings.doze" />
+                android:targetClass="com.xiaomi.parts.doze.DozeSettingsActivity"
+                android:targetPackage="com.xiaomi.parts.doze" />
         </Preference>
 
         <Preference
@@ -72,9 +72,21 @@
             android:icon="@drawable/ic_color">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
-                android:targetPackage="org.lineageos.settings.kcal" />
+                android:targetClass="com.xiaomi.parts.kcal.KCalSettingsActivity"
+                android:targetPackage="com.xiaomi.parts.kcal" />
         </Preference>
+
+        <Preference
+            android:key="lcd_features_settings" 
+            android:icon="@drawable/ic_cabc"
+            android:title="@string/lcd_features_title"
+            android:summary="@string/lcd_features_summary" >
+            <intent 
+                android:action="android.intent.action.MAIN" 
+                android:targetClass="com.xiaomi.parts.display.LcdFeaturesPreferenceActivity"
+                android:targetPackage="com.xiaomi.parts.display" />
+        </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

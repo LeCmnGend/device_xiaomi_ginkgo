@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
+import com.xiaomi.parts.display.LcdFeaturesPreferenceActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
@@ -41,11 +42,13 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_DOZE = "device_doze";
-    private static final String DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
+    private static final String DEVICE_DOZE_PACKAGE_NAME = "com.xiaomi.parts.doze";
 
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
+
+    private static final String PREF_LCD_FEATURES = "lcd_features_settings";
 
     public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
@@ -59,6 +62,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MIN_VIBRATION = 1504;
     public static final int MAX_VIBRATION = 3544;
 
+    private Preference mLcdFeaturesPref;
     private Preference mClearSpeakerPref;
     private SecureSettingSwitchPreference mFastcharge;
 
@@ -99,6 +103,13 @@ public class DeviceSettings extends PreferenceFragment implements
 
         kcal.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
+            startActivity(intent);
+            return true;
+        });
+
+        mLcdFeaturesPref = (Preference) findPreference(PREF_LCD_FEATURES);
+        mLcdFeaturesPref.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), LcdFeaturesPreferenceActivity.class);
             startActivity(intent);
             return true;
         });
