@@ -8,8 +8,8 @@ BOARD_VENDOR := xiaomi
 DEVICE_PATH := device/xiaomi/ginkgo
 
 # Some temp fix
-BUILD_BROKEN_DUP_RULES := true
-ALLOW_MISSING_DEPENDENCIES:=true
+# BUILD_BROKEN_DUP_RULES := true
+# ALLOW_MISSING_DEPENDENCIES:=true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS:=true
 
 # Architecture
