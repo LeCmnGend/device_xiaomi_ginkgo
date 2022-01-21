@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The SuperiorOS Project
+# Copyright (C) 2021 The crDroid OS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_ginkgo.mk
+    $(LOCAL_DIR)/cr_ginkgo.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_ginkgo-user \
-    superior_ginkgo-userdebug \
-    superior_ginkgo-eng
+    cr_ginkgo-user \
+    cr_ginkgo-userdebug \
+    cr_ginkgo-eng
