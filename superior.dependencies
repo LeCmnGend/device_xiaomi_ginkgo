@@ -5,4 +5,10 @@
         "target_path":  "prebuilts/clang/host/linux-x86/clang-sdllvm",
         "branch":       "ruby"
     },
+	{
+		"repository": "Joker-V2/android_vendor_ANXCamera",
+		"target_path": "vendor/ANXCamera",
+		"branch": "eleven",
+		"remote": "gh"
+	}	
 ]
