@@ -11,3 +11,6 @@ COMMON_LUNCH_CHOICES := \
     superior_ginkgo-user \
     superior_ginkgo-userdebug \
     superior_ginkgo-eng
+	
+NINJA_ARGS="-d explain"
+	
