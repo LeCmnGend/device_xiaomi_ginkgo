@@ -29,6 +29,13 @@ cc_library_shared {
     cflags: [
         "-fno-short-enums",
         "-D_ANDROID_",
+		"-Wno-format",
+		"-Wno-null-conversion",
+		"-Wno-overloaded-virtual",
+		"-Wno-reorder",
+		"-Wno-unneeded-internal-declaration",
+		"-Wno-unused-parameter",
+		"-Wno-unused-variable",
     ] + GNSS_CFLAGS,
 
     local_include_dirs: [
