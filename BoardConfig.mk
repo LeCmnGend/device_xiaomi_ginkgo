@@ -8,7 +8,7 @@ BOARD_VENDOR := xiaomi
 DEVICE_PATH := device/xiaomi/ginkgo
 
 # Some temp fix
-# BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_DUP_RULES := true
 # ALLOW_MISSING_DEPENDENCIES:=true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS:=true
 
@@ -118,7 +118,7 @@ TARGET_KERNEL_CONFIG := vendor/ginkgo-perf_defconfig
 
 # Use clang-13 instead
 TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_VERSION := proton
 #TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 #TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
