@@ -1,14 +1,20 @@
 [
     {
+        "repository":   "android_kernel_xiaomi_ginkgo",
+        "target_path":  "kernel/xiaomi/ginkgo"
+    },
+    {
+        "repository":   "android_vendor_xiaomi_ginkgo",
+        "target_path":  "vendor/xiaomi/ginkgo"
+    },
+    {
+        "repository":   "android_vendor_miuicamera",
+        "target_path":  "vendor/miuicamera",
+    },
+    {
         "remote":       "github",
         "repository":   "ThankYouMario/proprietary_vendor_qcom_sdclang",
         "target_path":  "prebuilts/clang/host/linux-x86/clang-sdllvm",
         "branch":       "ruby"
-    },
-	{
-		"repository": "Joker-V2/android_vendor_ANXCamera",
-		"target_path": "vendor/ANXCamera",
-		"branch": "eleven",
-		"remote": "gh"
-	}	
+    }
 ]
