@@ -127,7 +127,11 @@ TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(
 
 
 # NFC
+ifeq ($(TARGET_DEVICE),willow)
 TARGET_USES_NQ_NFC := true
+else
+TARGET_USES_NQ_NFC := false
+endif
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
