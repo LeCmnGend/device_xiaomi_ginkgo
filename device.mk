@@ -281,6 +281,10 @@ PRODUCT_PACKAGES += \
 	libipanat \
     liboffloadhal
 
+# Init scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.ginkgo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ginkgo.rc
+	
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
