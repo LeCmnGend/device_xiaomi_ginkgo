@@ -1158,6 +1158,7 @@ vendor/etc/camera/LDC_packdata_xiaomi_C3J_src2_ofilm.dat
 vendor/etc/camera/MIUI_Time.ttf
 vendor/etc/camera/Miui-Light.ttf
 vendor/etc/camera/arcsoft_calibration_data.bin
+vendor/etc/camera/beauty_ui9_intelligent_params.config
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/cameraconfig.txt
 vendor/etc/camera/csidtg_camera.xml
