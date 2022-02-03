@@ -36,6 +36,9 @@ PRODUCT_MODEL := Redmi Note 8
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Face unlock
+TARGET_USES_FACE_UNLOCK := true
+
 # Fingerprint
 BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys
 BUILD_DESCRIPTION := redfin-user 11 RQ3A.210905.001 7511028 release-keys
