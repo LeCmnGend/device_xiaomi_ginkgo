@@ -39,3 +39,7 @@ DEVICE_MAINTAINER := LeCmnGend
 
 #Gapps
 TARGET_GAPPS_ARCH := arm64
+
+# Face unlock
+TARGET_USES_FACE_UNLOCK := true
+
