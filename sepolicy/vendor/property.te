@@ -1,5 +1,6 @@
 # Thermal
 type thermal_engine_prop, property_type;
+type vendor_thermal_prop, property_type;
 
 # IR
 type lirc_prop, property_type;
@@ -9,3 +10,9 @@ type ifaa_prop, property_type;
 
 # Fingerprint
 type vendor_fp_prop, property_type;
+
+# GPS
+type vendor_gps_prop, property_type;
+
+# Telephony
+type vendor_hal_telephony_service, property_type;

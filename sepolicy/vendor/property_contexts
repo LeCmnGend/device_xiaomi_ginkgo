@@ -5,12 +5,19 @@ ro.camera.                  u:object_r:vendor_camera_prop:s0
 vendor.camera.              u:object_r:vendor_camera_prop:s0
 vidhance.                   u:object_r:vendor_camera_prop:s0
 
+# Display (Pixelworks)
+persist.sys.display.iris    u:object_r:vendor_display_prop:s0
+
 # Fingerprint
 persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc.         u:object_r:vendor_fp_prop:s0
 persist.sys.fp.             u:object_r:vendor_fp_prop:s0
 sys.fp.                     u:object_r:vendor_fp_prop:s0
 sys.vendor.fp.              u:object_r:vendor_fp_prop:s0
+vendor.goodix.    u:object_r:vendor_gx_fpd_prop:s0
+
+# GPS
+vendor.gps.                  u:object_r:vendor_gps_prop:s0
 
 # IR
 ro.lirc.dev                 u:object_r:lirc_prop:s0
@@ -26,6 +33,14 @@ ro.product.mod_device       u:object_r:exported_default_prop:s0
 persist.sys.ifaa            u:object_r:ifaa_prop:s0
 persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
 
+
+# RIL
+ro.vendor.csc.modemhash             u:object_r:vendor_radio_prop:s0
+vendor.asus.operator.iso-country    u:object_r:vendor_radio_prop:s0
+
+# Sensors
+vendor.proximity.                           u:object_r:vendor_sensors_prop:s0
+
 # Thermal
 sys.thermal.                u:object_r:thermal_engine_prop:s0
 persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
@@ -33,3 +48,6 @@ persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
 # Wifi Display 
 persist.vendor.setWFDInfo.  u:object_r:vendor_wfd_sys_debug_prop:s0
 
+# ZRAM
+persist.vendor.zram    u:object_r:vendor_mpctl_prop:s0
+vendor.zram.           u:object_r:vendor_mpctl_prop:s0

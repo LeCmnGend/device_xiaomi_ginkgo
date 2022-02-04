@@ -1,3 +1,12 @@
+# Camera
+type vendor_proc_camera, fs_type, proc_type;
+
+# Display
+type vendor_proc_graphics, fs_type, proc_type;
+
+# EVT
+type vendor_proc_evt, fs_type, proc_type;
+
 type fingerprint_data_file, data_file_type, file_type;
 type goodix_fingerprint_data_file, data_file_type, file_type, core_data_file_type;
 type thermal_data_file, data_file_type, file_type;
@@ -10,3 +19,8 @@ type sysfs_touchpanel, fs_type, sysfs_type;
 type kcal_dev, sysfs_type, fs_type;
 type sysfs_fcharge, sysfs_type, fs_type;
 type vibrator_dev, sysfs_type, fs_type;
+
+# Files in rootfs
+type bat_file, file_type;
+type demoapp_file, file_type;
+type log_file, file_type;

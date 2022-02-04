@@ -1,2 +1,4 @@
 type lirc_device, dev_type;
 type fingerprint_device, dev_type;
+
+type asdf_block_device, dev_type;
