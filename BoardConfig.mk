@@ -12,6 +12,7 @@ DEVICE_PATH := device/xiaomi/ginkgo
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
 KERNEL_LD := LD=ld.lld
+TARGET_KERNEL_USE_LLD := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
@@ -86,7 +87,8 @@ TARGET_USES_GRALLOC4 := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+#TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+TARGET_TAP_TO_WAKE_NODE := 1
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
